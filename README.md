@@ -41,3 +41,7 @@ You should also provide a way to clear the cache by running a command like the f
 ```shell
 caching-proxy --clear-cache
 ```
+
+# References
+
+- https://www.prisma.io/dataguide/managing-databases/introduction-database-caching

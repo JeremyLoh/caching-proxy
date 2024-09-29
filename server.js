@@ -12,7 +12,10 @@ class Server {
   async start(printProgramName) {
     return new Promise((resolve, reject) => {
       this.app.get("/favicon.ico", (req, res) => res.sendStatus(204))
-      this.app.get("*", (req, res, next) => forwardRequest(req, res, next))
+      this.app.get("*", (req, res, next) => {
+        forwardRequest(req, res, next)
+        printProgramName()
+      })
       this.server = this.app.listen(this.port, () => {
         console.log(`Server started on port ${this.port}`)
         resolve()
@@ -20,9 +23,10 @@ class Server {
     })
   }
 
-  async stop() {
+  async stop(printProgramName) {
     return new Promise((resolve, reject) => {
       this.server.close((error) => {
+        printProgramName()
         console.log("Closed server")
         if (error) {
           console.error(error.message)

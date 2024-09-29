@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JeremyLoh/caching-proxy/issues"
   },
-  "homepage": "https://github.com/JeremyLoh/caching-proxy#readme"
+  "homepage": "https://github.com/JeremyLoh/caching-proxy#readme",
+  "dependencies": {
+    "express": "4.21.0"
+  }
 }

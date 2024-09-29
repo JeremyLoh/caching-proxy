@@ -1,0 +1,22 @@
+{
+  "name": "caching-proxy",
+  "version": "1.0.0",
+  "description": "Caches responses from other servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremyLoh/caching-proxy.git"
+  },
+  "keywords": [
+    "cache"
+  ],
+  "author": "JeremyLoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeremyLoh/caching-proxy/issues"
+  },
+  "homepage": "https://github.com/JeremyLoh/caching-proxy#readme"
+}

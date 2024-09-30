@@ -61,5 +61,8 @@ The response of https://jsonplaceholder.typicode.com/todos/1 will be displayed a
 
 - https://www.prisma.io/dataguide/managing-databases/introduction-database-caching
 - Prevent HTTP response of proxy sent to user ERR_CONTENT_DECODING_FAILED. Remove the "Content-Encoding" or "content-encoding" header from server response
+
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
   - https://stackoverflow.com/questions/40683850/apache-proxying-leads-to-err-content-decoding-failed-error
+
+- https://roadmap.sh/projects/caching-server

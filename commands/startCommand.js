@@ -9,8 +9,13 @@ class StartCommand {
   }
 
   async execute() {
+    // TODO refactor to only have one server, but different ports are created
     this.server = new Server(this.port, this.origin)
-    await this.server.start(printProgramName)
+    try {
+      await this.server.start(printProgramName)
+    } catch (error) {
+      console.error(error.message)
+    }
   }
 }
 

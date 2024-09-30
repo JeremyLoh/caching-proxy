@@ -5,6 +5,11 @@ Caches responses from other servers
 CLI tool that starts a caching proxy server, it will forward requests to the actual server and cache the responses.
 If the same request is made again, it will return the cached response instead of forwarding the request to the server
 
+Cache entries will be cleared if Time to Live is exceeded.
+Cache eviction strategy used is TTL (Time to live)
+
+- https://redis.io/blog/cache-eviction-strategies/
+
 # Requirements
 
 User should be able to start the caching proxy server by running a command like the following:
@@ -41,3 +46,23 @@ You should also provide a way to clear the cache by running a command like the f
 ```shell
 caching-proxy --clear-cache
 ```
+
+# Example Usage
+
+```
+# To start the server on port 3000 to have proxy to origin "https://jsonplaceholder.typicode.com"
+--port 3000 --origin https://jsonplaceholder.typicode.com
+
+In a browser, visit => http://localhost:3000/todos/1
+The response of https://jsonplaceholder.typicode.com/todos/1 will be displayed and cached
+```
+
+# References
+
+- https://www.prisma.io/dataguide/managing-databases/introduction-database-caching
+- Prevent HTTP response of proxy sent to user ERR_CONTENT_DECODING_FAILED. Remove the "Content-Encoding" or "content-encoding" header from server response
+
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
+  - https://stackoverflow.com/questions/40683850/apache-proxying-leads-to-err-content-decoding-failed-error
+
+- https://roadmap.sh/projects/caching-server

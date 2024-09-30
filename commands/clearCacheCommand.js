@@ -4,7 +4,8 @@ class ClearCacheCommand {
   }
 
   async execute() {
-    // TODO clear cache of server (singleton)
+    this.cache.clearCache()
+    console.log("Cleared Cache")
   }
 }
 

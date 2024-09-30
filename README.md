@@ -10,6 +10,11 @@ Cache eviction strategy used is TTL (Time to live)
 
 - https://redis.io/blog/cache-eviction-strategies/
 
+# Running Application
+
+1. Install dependencies using `npm install`
+2. Run `node index.js` or `npm run dev` (run "dev" script)
+
 # Requirements
 
 User should be able to start the caching proxy server by running a command like the following:

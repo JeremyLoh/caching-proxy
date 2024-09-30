@@ -5,14 +5,16 @@ class StartCommand {
   constructor(port, origin) {
     this.port = port
     this.origin = origin
-    this.server = null
+    this.server = Server
   }
 
   async execute() {
-    // TODO refactor to only have one server, but different ports are created
-    this.server = new Server(this.port, this.origin)
     try {
-      await this.server.start(printProgramName)
+      await this.server.start({
+        port: this.port,
+        origin: this.origin,
+        printProgramName,
+      })
     } catch (error) {
       console.error(error.message)
     }
